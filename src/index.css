@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: bisque; */
+  background-image: url("https://tse3.mm.bing.net/th?id=OIP.2fuYWeeojtBQlMGsLAy5ygHaFj&pid=Api&P=0");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 code {
