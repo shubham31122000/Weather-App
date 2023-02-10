@@ -1,6 +1,6 @@
 import './App.css';
 import { TextField,Avatar, Card, CardContent, Grid } from '@mui/material';
-import { border, borderRadius } from '@mui/system';
+// import { border, borderRadius } from '@mui/system';
 import { useEffect, useState } from 'react';
 import { API_KEY } from './apikey';
 import axios from 'axios';
@@ -10,17 +10,18 @@ function App() {
   const [searchCity,setSearchCity] = useState("phagwara")
 
   let baseURL = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=${API_KEY}&units=metric`
-  const getWeather = () => {
-    axios.get(baseURL)
-        .then((res)=>{
-          setData(res.data)
-          // console.log("Open Weather",res);
-        })
-        .catch((e)=>{
-          console.log(e.message)
-        })
-  }
+  
   useEffect(()=> {
+    const getWeather = () => {
+      axios.get(baseURL)
+          .then((res)=>{
+            setData(res.data)
+            // console.log("Open Weather",res);
+          })
+          .catch((e)=>{
+            console.log(e.message)
+          })
+    }
     getWeather()
   },[baseURL])
 
